@@ -10,7 +10,7 @@ class AuthController
     public function loginPage()
     {
         if (isset($_SESSION['user'])) {
-            header('Location: ./dashboard');
+            header('Location: ' . BASE_URL . '/dashboard');
             exit;
         }
         ob_start();
@@ -25,7 +25,7 @@ class AuthController
 
         if (empty($email) || empty($password)) {
             $_SESSION['error'] = 'Заполните все поля';
-            header('Location: ./login');
+            header('Location: ' . BASE_URL . '/login');
             exit;
         }
 
@@ -42,11 +42,11 @@ class AuthController
                 'name' => $user['name'],
                 'email' => $user['email']
             ];
-            header('Location: ./dashboard');
+            header('Location: ' . BASE_URL . '/dashboard');
             exit;
         } else {
             $_SESSION['error'] = 'Неверный email или пароль';
-            header('Location: ./login');
+            header('Location: ' . BASE_URL . '/login');
             exit;
         }
     }
@@ -78,7 +78,7 @@ class AuthController
         $stmt->execute(['email' => $email]);
         if ($stmt->fetch()) {
             $_SESSION['error'] = 'Пользователь с таким email уже существует';
-            header('Location: ./register');
+            header('Location: ' . BASE_URL . '/register');
             exit;
         }
 
@@ -99,11 +99,11 @@ class AuthController
                 'email' => $email
             ];
 
-            header('Location: ./dashboard');
+            header('Location: ' . BASE_URL . '/dashboard');
             exit;
         } catch (\PDOException $e) {
             $_SESSION['error'] = 'Ошибка при регистрации: ' . $e->getMessage();
-            header('Location: ./register');
+            header('Location: ' . BASE_URL . '/register');
             exit;
         }
     }
@@ -111,7 +111,7 @@ class AuthController
     public function logout()
     {
         session_destroy();
-        header('Location: ./');
+        header('Location: ' . BASE_URL . '/');
         exit;
     }
 }

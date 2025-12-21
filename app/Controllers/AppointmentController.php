@@ -9,7 +9,7 @@ class AppointmentController
     public function create()
     {
         if (!isset($_SESSION['user'])) {
-            header('Location: ./login');
+            header('Location: ' . BASE_URL . '/login');
             exit;
         }
         ob_start();
@@ -20,7 +20,7 @@ class AppointmentController
     public function store()
     {
         if (!isset($_SESSION['user'])) {
-            header('Location: ./login');
+            header('Location: ' . BASE_URL . '/login');
             exit;
         }
 
@@ -30,7 +30,7 @@ class AppointmentController
 
         if (empty($doctor) || empty($date) || empty($time)) {
             $_SESSION['error'] = 'Заполните все поля';
-            header('Location: ./book');
+            header('Location: ' . BASE_URL . '/book');
             exit;
         }
 
@@ -53,11 +53,11 @@ class AppointmentController
             ]);
 
             $_SESSION['success'] = 'Запись успешно создана!';
-            header('Location: ./dashboard');
+            header('Location: ' . BASE_URL . '/dashboard');
             exit;
         } catch (\PDOException $e) {
             $_SESSION['error'] = 'Ошибка: ' . $e->getMessage();
-            header('Location: ./book');
+            header('Location: ' . BASE_URL . '/book');
             exit;
         }
     }
