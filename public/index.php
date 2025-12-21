@@ -11,7 +11,7 @@ define('BASE_URL', $baseDir);
 
 spl_autoload_register(function ($class) {
     $prefix = 'App\\';
-    $base_dir = __DIR__ . '/app/';
+    $base_dir = __DIR__ . '/../app/';
     $len = strlen($prefix);
 
     if (strncmp($prefix, $class, $len) !== 0) {
@@ -38,6 +38,7 @@ $homeController = new HomeController();
 $authController = new AuthController();
 $dashboardController = new DashboardController();
 $appointmentController = new AppointmentController();
+
 $router->get('/', [$homeController, 'index']);
 
 $router->get('/dashboard', [$dashboardController, 'index']);

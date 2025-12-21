@@ -32,7 +32,6 @@ class AuthController
         $db = new Database();
         $conn = $db->getConnection();
 
-        // Check if using SQLite (which uses 'users' table same way)
         $stmt = $conn->prepare("SELECT * FROM users WHERE email = :email");
         $stmt->execute(['email' => $email]);
         $user = $stmt->fetch();
@@ -66,7 +65,6 @@ class AuthController
         $email = $_POST['email'] ?? '';
         $password = $_POST['password'] ?? '';
 
-        // Simple Validation
         if (empty($name) || empty($email) || empty($password)) {
             $_SESSION['error'] = 'Заполните обязательные поля';
             header('Location: ./register');
@@ -76,7 +74,6 @@ class AuthController
         $db = new Database();
         $conn = $db->getConnection();
 
-        // Check if user exists
         $stmt = $conn->prepare("SELECT id FROM users WHERE email = :email");
         $stmt->execute(['email' => $email]);
         if ($stmt->fetch()) {
@@ -85,7 +82,6 @@ class AuthController
             exit;
         }
 
-        // Create user
         $fullName = $name . ' ' . $surname;
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
@@ -97,7 +93,6 @@ class AuthController
                 'password' => $hashedPassword
             ]);
 
-            // Auto login after register
             $_SESSION['user'] = [
                 'id' => $conn->lastInsertId(),
                 'name' => $fullName,
@@ -106,7 +101,6 @@ class AuthController
 
             header('Location: ./dashboard');
             exit;
-
         } catch (\PDOException $e) {
             $_SESSION['error'] = 'Ошибка при регистрации: ' . $e->getMessage();
             header('Location: ./register');

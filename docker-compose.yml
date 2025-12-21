@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: medicaltrack_web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app:/var/www/html/app
+      - ./public:/var/www/html/public
+      - ./index.php:/var/www/html/index.php
+      - ./public/index.php:/var/www/html/public/index.php
+      - ./public/.htaccess:/var/www/html/public/.htaccess
+      - ./data:/var/www/html/data
+    environment:
+      - PHP_DISPLAY_ERRORS=On
+      - PHP_ERROR_REPORTING=E_ALL
+    restart: unless-stopped
+    networks:
+      - medicaltrack_network
+
+networks:
+  medicaltrack_network:
+    driver: bridge
+
+volumes:
+  db_data:
+    driver: local

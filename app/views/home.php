@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astana Medical | Профессиональная забота</title>
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/public/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -31,7 +31,8 @@
     <div class="blob blob-2"></div> -->
 
     <!-- Hero Section -->
-    <section class="hero" style="background: url('public/img/astana-bg.png') no-repeat center center/cover;">
+    <section class="hero"
+        style="background: url('<?php echo BASE_URL; ?>/public/img/astana-bg.png') no-repeat center center/cover;">
         <div
             style="position: absolute; inset: 0; background: rgba(240, 249, 255, 0.85); backdrop-filter: blur(8px); z-index: 0;">
         </div>
@@ -316,7 +317,6 @@
     </footer>
 
     <script>
-        // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('.navbar');
             if (window.scrollY > 50) {

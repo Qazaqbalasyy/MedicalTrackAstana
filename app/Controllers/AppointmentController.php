@@ -34,8 +34,6 @@ class AppointmentController
             exit;
         }
 
-        // Split doctor name and specialty (simple hack for now)
-        // Expected format: "Dr. Name|Specialty"
         $doctorParts = explode('|', $doctor);
         $doctorName = $doctorParts[0] ?? $doctor;
         $specialty = $doctorParts[1] ?? 'Врач';
@@ -57,7 +55,6 @@ class AppointmentController
             $_SESSION['success'] = 'Запись успешно создана!';
             header('Location: ./dashboard');
             exit;
-
         } catch (\PDOException $e) {
             $_SESSION['error'] = 'Ошибка: ' . $e->getMessage();
             header('Location: ./book');

@@ -13,19 +13,18 @@ class Database
     public function __construct()
     {
         $this->conn = null;
-        // Path to SQLite file: /app/database.sqlite
-        // Adjust path to be safely writable. Going up two levels from core -> app -> root
-        $this->db_file = __DIR__ . '/../../database.sqlite';
+        $dataDir = __DIR__ . '/../../data';
+        if (!is_dir($dataDir)) {
+            mkdir($dataDir, 0777, true);
+        }
+        $this->db_file = $dataDir . '/database.sqlite';
 
         try {
-            // Connect to SQLite file (creates it automatically)
             $this->conn = new PDO("sqlite:" . $this->db_file);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-            // Create users table if not exists
             $this->createTables();
-
         } catch (PDOException $e) {
             echo "<div style='background: #fee2e2; color: #991b1b; padding: 2rem;'>
                 <h3>Ошибка базы данных</h3>
@@ -38,7 +37,6 @@ class Database
 
     private function createTables()
     {
-        // SQLite syntax
         $sqlUsers = "CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT NOT NULL,
