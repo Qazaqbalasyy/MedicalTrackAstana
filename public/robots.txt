@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /app/
+Disallow: /storage/
+Disallow: /question\ and\ answer/
+Disallow: /dashboard
+
+Sitemap: http://localhost/php/med/public/sitemap.xml

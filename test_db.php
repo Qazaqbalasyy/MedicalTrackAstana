@@ -29,8 +29,8 @@ foreach ($hosts as $host) {
                     echo "<td>-</td>";
                     $success = true;
 
-                    // Found working config!
-                    break 4; // Break all loops
+                    
+                    break 4; 
 
                 } catch (PDOException $e) {
                     echo "<td style='color: red;'>Fail</td>";

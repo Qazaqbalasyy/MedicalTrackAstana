@@ -1,0 +1,138 @@
+<?php
+return [
+    
+    'nav_functions' => 'Functions',
+    'nav_doctors' => 'Doctors',
+    'nav_about' => 'About Us',
+    'nav_cabinet' => 'Patient Portal',
+
+    
+    'hero_title' => 'Astana Medical',
+    'hero_subtitle' => 'Care for Everyone.',
+    'hero_desc' => 'Modern digital clinic in the heart of the capital. Your medical data, tests, and doctor appointments — all in one app.',
+    'hero_btn_start' => 'Get Started',
+    'stat_diag' => 'Fast Diagnostics',
+    'stat_ai' => 'AI Monitoring',
+    'stat_records' => 'Secured Records',
+
+    
+    'dash_title' => 'Health Overview',
+    'dash_today' => 'Today',
+    'dash_pulse' => 'Pulse',
+    'dash_oxygen' => 'Oxygen',
+    'dash_calories' => 'Calories',
+    'dash_sleep' => 'Sleep',
+    'dash_doctor_visit' => 'Visit',
+    'dash_enter' => 'Login',
+
+    
+    'feat_title' => 'Our Features',
+    'feat_desc' => 'We use advanced technology to care for your health.',
+    'feat_card1_title' => 'Electronic Records',
+    'feat_card1_desc' => 'All medical history, tests, and prescriptions are always at hand in a secure cloud.',
+    'feat_card2_title' => 'Online Consultations',
+    'feat_card2_desc' => 'Video calls with the capital\'s best specialists from the comfort of your home.',
+    'feat_card3_title' => '24/7 Monitoring',
+    'feat_card3_desc' => 'Connecting smart devices for continuous monitoring of vital signs.',
+    'feat_card4_title' => 'Smart Diagnostics',
+    'feat_card4_desc' => 'AI algorithms help doctors diagnose faster and more accurately.',
+
+    
+    'doc_title' => 'Our Specialists',
+    'doc_desc' => 'Top-category doctors with international experience.',
+    'doc_card1_spec' => 'Cardiologist, MD',
+    'doc_card1_text' => '20 years of experience. Expert in invasive cardiology.',
+    'doc_card2_spec' => 'Therapist',
+    'doc_card2_text' => 'Specialist in preventive medicine and diagnostics.',
+    'doc_card3_spec' => 'Neurologist',
+    'doc_card3_text' => 'Expert in treating headaches and sleep disorders.',
+
+    
+    'about_title_1' => 'New Standard',
+    'about_title_2' => 'Of Medicine in Astana',
+    'about_text_1' => 'Astana Medical is Kazakhstan\'s first fully digital health ecosystem. We have combined advanced Silicon Valley technologies with traditions of domestic medicine.',
+    'about_text_2' => 'Our mission is to make quality medicine accessible, transparent, and convenient for every resident of the capital and the entire country.',
+    'about_list_1' => 'JCI Unified Quality Standard',
+    'about_list_2' => 'Own Laboratory',
+    'about_list_3' => 'Insurance Partners Worldwide',
+    'about_btn' => 'More About Us',
+
+    
+    'rev_title' => 'Patient Reviews',
+    'rev_desc' => 'Patient trust is our main value.',
+    'rev_1_text' => '"Wonderful clinic! Signed up online in 2 minutes. Doctor Elena Sokolova is very attentive, explained everything in detail. Now only here."',
+    'rev_1_role' => 'Patient',
+    'rev_2_text' => '"Very convenient that all tests are in the app. No need to carry papers. Service at the level of the world\'s best clinics."',
+    'rev_2_role' => 'Patient',
+    'rev_3_text' => '"Came with my grandson for a check-up. No queues, everything on time. Staff is polite, cleanliness and order everywhere."',
+    'rev_3_role' => 'Pensioner',
+
+    
+    'faq_title' => 'Frequently Asked Questions',
+    'faq_desc' => 'We have prepared answers to the most popular questions of our visitors.',
+    'faq_1_q' => 'How to book an appointment via the website?',
+    'faq_1_a' => 'To book an appointment, simply click the "Get Started" or "Register" button, create a personal account, and choose the necessary specialist and convenient time.',
+    'faq_2_q' => 'Do you work with medical insurance?',
+    'faq_2_a' => 'Yes, we cooperate with most major insurance companies in Kazakhstan and international partners.',
+    'faq_3_q' => 'How quickly are test results available?',
+    'faq_3_a' => 'Most test results are available in your personal account within 24 hours after submission.',
+    'faq_4_q' => 'Do you have a mobile app?',
+    'faq_4_a' => 'Yes, we have a convenient app for iOS and Android. You can book appointments, view test results, and receive medication reminders.',
+    'faq_5_q' => 'How is my personal data protected?',
+    'faq_5_a' => 'The security of your data is our priority. We use modern encryption protocols and store information on certified secure servers.',
+    'faq_6_q' => 'Can I call a doctor to my home?',
+    'faq_6_a' => 'Of course. You can arrange for a therapist or pediatrician to visit your home via the website or by phone. The team will arrive on the same day.',
+
+    
+    'footer_desc' => 'Advancing healthcare standards in Kazakhstan through innovative technologies and care for people.',
+    'footer_col1' => 'For Patients',
+    'footer_link_find' => 'Find a Doctor',
+    'footer_link_book' => 'Book an Appointment',
+    'footer_link_services' => 'Services and Prices',
+    'footer_link_cab' => 'Personal Account',
+    'footer_link_faq' => 'Q&A',
+    'footer_col2' => 'About Clinic',
+    'footer_link_about' => 'About Us',
+    'footer_link_news' => 'News',
+    'footer_link_career' => 'Careers',
+    'footer_link_partners' => 'Partners',
+    'footer_link_contact' => 'Contacts',
+    'footer_col3' => 'Contacts',
+    'footer_addr' => 'Astana, Mangilik El Ave., 55',
+    'footer_rights' => 'All rights reserved.',
+
+    
+    'checkup_title' => 'Health Check-up Programs',
+    'checkup_desc' => 'Comprehensive check-ups for those who value their time and health.',
+    'checkup_card1_title' => 'Healthy Heart',
+    'checkup_card1_desc' => 'Complete diagnostics of the cardiovascular system.',
+    'checkup_card1_price' => '$100',
+    'checkup_card2_title' => 'Women\'s Health',
+    'checkup_card2_desc' => 'Annual comprehensive examination for women.',
+    'checkup_card2_price' => '$85',
+    'checkup_card3_title' => 'Men\'s Check-up',
+    'checkup_card3_desc' => 'Early diagnostics and maintenance of men\'s health.',
+    'checkup_card3_price' => '$80',
+    'checkup_all' => 'All Packages',
+
+    
+    'news_title' => 'Stay Updated',
+    'news_desc' => 'Subscribe to our newsletter for health tips and clinic news.',
+    'news_placeholder' => 'Your email',
+    'news_btn' => 'Subscribe',
+
+    
+    'symptom_title' => 'AI Symptom Checker',
+    'symptom_desc' => 'Select your symptoms, and our AI will suggest which doctor you should see.',
+    'symptom_select' => 'What bothers you?',
+    'symptom_head' => 'Headache',
+    'symptom_fever' => 'Fever',
+    'symptom_cough' => 'Cough',
+    'symptom_stomach' => 'Stomach pain',
+    'symptom_heart' => 'Palpitations',
+    'symptom_fatigue' => 'Fatigue',
+    'symptom_btn' => 'Analyze Symptoms',
+    'symptom_result_title' => 'Preliminary Result',
+    'symptom_result_recommend' => 'Recommended specialist:',
+    'symptom_disclaimer' => 'Note: This is not a formal diagnosis. Please consult a doctor.',
+];

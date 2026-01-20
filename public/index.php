@@ -39,6 +39,30 @@ $authController = new AuthController();
 $dashboardController = new DashboardController();
 $appointmentController = new AppointmentController();
 
+
+$currentLang = $_SESSION['lang'] ?? 'ru';
+App\Core\Lang::load($currentLang);
+
+
+$router->get('/lang/ru', function () {
+    $_SESSION['lang'] = 'ru';
+    $redirect = $_SERVER['HTTP_REFERER'] ?? '/';
+    header('Location: ' . $redirect);
+    exit;
+});
+$router->get('/lang/kk', function () {
+    $_SESSION['lang'] = 'kk';
+    $redirect = $_SERVER['HTTP_REFERER'] ?? '/';
+    header('Location: ' . $redirect);
+    exit;
+});
+$router->get('/lang/en', function () {
+    $_SESSION['lang'] = 'en';
+    $redirect = $_SERVER['HTTP_REFERER'] ?? '/';
+    header('Location: ' . $redirect);
+    exit;
+});
+
 $router->get('/', [$homeController, 'index']);
 
 $router->get('/dashboard', [$dashboardController, 'index']);
